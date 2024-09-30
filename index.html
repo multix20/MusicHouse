@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Awesome Image slider</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla:400,700">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body class="loading">
+
+	<!-- add karla font -->
+
+	<header>
+		<div class="inner">
+			<div class="burger"></div>
+			<nav>
+				<a class="active" href="#">Servicios</a>
+				<a href="#">Soy Pipe</a>
+				<a href="#">Mis pegas</a>
+				<a href="#">agenda</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div id="slider">
+
+			<div class="slider-inner">
+				<div id="slider-content">
+					<div class="meta">Somos</div>
+					<h2 id="slide-title"> Tú espacio creativo <br>para la música</h2>
+					<span data-slide-title="0">Tú espacio creativo <br>para la música</span>
+					<span data-slide-title="1">Estudio de <br>grabación</span>
+					<span data-slide-title="2">Sala de<br> ensayo</span>
+					<span data-slide-title="3">Mezcla <br>y masterización</span>
+					<div class="meta">Donde</div>
+					<div id="slide-status">
+						<a href="https://www.google.com/maps/place/Federation+Square,+Melbourne+VIC+3000,+Australia/" target="_blank" title="Ver en Google Maps">
+						  <i class="fas fa-map-marker-alt" style="color: red; font-size: 40px;"></i>
+						</a>
+						Aquí en Pitrufquén
+					  </div>
+					  
+					  <span data-slide-status="0">
+						<a href="https://www.google.com/maps/place/Federation+Square,+Melbourne+VIC+3000,+Australia/" target="_blank" title="Ver en Google Maps">
+						  <i class="fas fa-map-marker-alt" style="color: red; font-size: 40px;"></i>
+						</a>
+						Ven a grabar en Pitufquén.
+					  </span>
+					  
+					  <span data-slide-status="1">
+						<a href="https://www.google.com/maps/place/Federation+Square,+Melbourne+VIC+3000,+Australia/" target="_blank" title="Ver en Google Maps">
+						  <i class="fas fa-map-marker-alt" style="color: red; font-size: 40px;"></i>
+						</a>
+						La mejor calidad de sonido.
+					  </span>
+					  
+					  <span data-slide-status="2">
+						<a href="https://www.google.com/maps/place/Federation+Square,+Melbourne+VIC+3000,+Australia/" target="_blank" title="Ver en Google Maps">
+						  <i class="fas fa-map-marker-alt" style="color: red; font-size: 40px;"></i>
+						</a>
+						Espacio perfecto para tu música
+					  </span>
+					  
+					  <span data-slide-status="3">
+						<a href="https://www.google.com/maps/place/Federation+Square,+Melbourne+VIC+3000,+Australia/" target="_blank" title="Ver en Google Maps">
+						  <i class="fas fa-map-marker-alt" style="color: red; font-size: 40px;"></i>
+						</a>
+						La música que siempre soñaste
+					  </span>
+					  
+				</div>
+			</div>
+
+			<img src="img/bear2.jpg"/>
+			<img src="img/leopard2.jpg"/>
+			<img src="img/lion2.jpg"/>
+			<img src="img/tiger2.jpg"/>
+
+			<div id="pagination">
+				<button class="active" data-slide="0"></button>
+				<button data-slide="1"></button>
+				<button data-slide="2"></button>
+				<button data-slide="3"></button>
+			</div>
+
+		</div>
+	</main>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-40525870-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-40525870-5');
+</script>
+
+	</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
