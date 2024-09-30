@@ -2,7 +2,332 @@
 @import url("https://use.typekit.net/euz1eqv.css");
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block;
+}@charset "UTF-8";
+@import url("https://use.typekit.net/euz1eqv.css");
+
+/* Estilos globales y reset */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
 }
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #23272A;
+  overflow: hidden;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto; /* Para que las imágenes sean fluidas */
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: grey;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: grey;
+  color: white;
+}
+
+/* Estilos de la cabecera */
+header {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 115px;
+  z-index: 10;
+  background-image: url(menutexture.png);
+  background-position: center top;
+  background-size: auto 200px;
+  background-repeat: repeat-x;
+}
+
+header .inner {
+  max-width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column; /* Adaptación para pantallas pequeñas */
+}
+
+header nav {
+  display: none;
+}
+
+header nav a {
+  font-family: "Arial", serif;
+  font-size: 12px;
+  color: #8c8c8e;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-decoration: none;
+  margin: 0 18px;
+}
+
+header nav a.active, header nav a:hover {
+  color: white;
+}
+
+header .burger {
+  display: block;
+  position: relative;
+  top: -6px;
+  padding-left: 30px;
+}
+
+header .burger:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 2px;
+  background: white;
+  box-shadow: 0 12px 0 0 white, 0 6px 0 0 white;
+}
+
+header .donate-link {
+  width: 72px;
+  text-align: center;
+  position: absolute;
+  right: 10px;
+  top: 27px;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-decoration: none;
+  padding-bottom: 6px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Estilos para el slider */
+main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+#slider {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#slider img {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.slider-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1060px;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 5;
+  flex-direction: column; /* Adaptación para pantallas pequeñas */
+}
+
+#slider-content {
+  padding: 0 10px;
+}
+
+#slider-content h2 {
+  font-family: "acta-display", serif;
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: -1px;
+  color: white;
+  line-height: 30px;
+  margin: 20px 0 60px;
+}
+
+#slider-content .meta {
+  display: inline-block;
+  font-family: "Arial", sans-serif;
+  font-size: 11px;
+  letter-spacing: 5px;
+  color: #88888a;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#slider-content #slide-status {
+  margin-top: 10px;
+  font-family: "acta-display", serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: white;
+}
+
+#pagination {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  z-index: 6;
+}
+
+#pagination button {
+  display: block;
+  border: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #FFFFFF;
+  border-radius: 100%;
+  padding: 0;
+  margin: 30px 0;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.2;
+  transition: opacity 0.2s ease-in-out;
+  outline: none;
+}
+
+/* Media Queries para hacer el sitio responsivo */
+@media (max-width: 600px) {
+  header .inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav a {
+    font-size: 14px;
+    margin: 0 10px;
+  }
+
+  main {
+    height: auto; /* Asegurar que el contenido se ajuste a pantallas más pequeñas */
+  }
+
+  #slider-content h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  #pagination {
+    right: 10px;
+  }
+
+  #pagination button {
+    margin: 10px 0;
+  }
+
+  #slider-content #slide-status {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  header nav a {
+    font-size: 16px;
+  }
+
+  #slider-content h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  #pagination {
+    right: 20px;
+  }
+
+  #slider-content #slide-status {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1025px) {
+  header nav a {
+    font-size: 18px;
+  }
+
+  #slider-content h2 {
+    font-size: 110px;
+    line-height: 120px;
+  }
+
+  #slider-content #slide-status {
+    font-size: 34px;
+  }
+}
+
+/* Page Loader */
+.loading:before {
+  content: "";
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+.loading:after {
+  content: "";
+  position: fixed;
+  z-index: 100000;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin: -30px 0 0 -30px;
+  pointer-events: none;
+  border-radius: 50%;
+  opacity: 0.4;
+  background: white;
+  animation: loaderAnim 0.7s linear infinite alternate forwards;
+}
+
+@keyframes loaderAnim {
+  to {
+    opacity: 1;
+    transform: scale3d(0.5, 0.5, 1);
+  }
+}
+
 
 audio, canvas, video {
   display: inline-block;
